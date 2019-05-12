@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  monSuperProjet
-//
-//  Created by azog on 11/05/2019.
-//  Copyright © 2019 maSuperOrganisation. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain

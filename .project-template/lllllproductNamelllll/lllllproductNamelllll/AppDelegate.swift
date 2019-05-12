@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  lllllproductNamelllll
 //
-//  Created by J-S Durier on 11/05/2019.
-//  Copyright © 2019 lllllorganizationNamelllll. All rights reserved.
+//  Created by {{userAlias}} on {{dd/mm/yyyy}}.
+//  Copyright © {{yyyy}} lllllorganizationNamelllll. All rights reserved.
 //
 
 import Cocoa

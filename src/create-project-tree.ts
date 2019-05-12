@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as fsExtra from "fs-extra";
 import * as path from "path";
 import { IConfig } from "./config";
+import { getDate, getYear } from "./utils";
 
 // Informations about the project template
 const sourcePath = path.join(__dirname, '..', '.project-template');
@@ -75,17 +76,22 @@ export function createProject(config: IConfig): void {
 	function replaceInFile(filePath: string): void {
 		const content = fs.readFileSync(filePath, 'utf8');
 		let newContent = content;
-		const currentDate = new Date();
-		const day = ((currentDate.getDate() < 10) ? '0' : '') + currentDate.getDate();
-		const year = currentDate.getFullYear();
-		const month = (((currentDate.getMonth() + 1) < 10) ? '0' : '') + (currentDate.getMonth() + 1);
-		var dateString = day + '/' + month + '/' + year;
+		const dateString = getDate();
+		const year = getYear();
 		const toReplace = {
+			userAlias: {
+				default: '{{userAlias}}',
+				current: userAlias
+			},
 			date: {
-				default: 'Created by J-S Durier on 11/05/2019.',
-				current: `Created by ${userAlias} on ${dateString}.`
+				default: '{{dd/mm/yyyy}}',
+				current: dateString
+			},
+			year: {
+				default: '{{yyyy}}',
+				current: year + ''
 			}
-		}
+		};
 		const map: { [key: string]: { default: string, current: string } } = {
 			...projectValues,
 			...toReplace

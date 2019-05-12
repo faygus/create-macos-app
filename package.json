@@ -8,7 +8,7 @@
 		"start": "ts-node --project tsconfig.json src/index.ts example/config.json example/source-code.txt",
 		"package": "ts-node --project package/tsconfig.json package/script.ts",
 		"build": "tsc && npm run package",
-		"publish": "cd dist && npm publish"
+		"publish": "cd dist && npm publish && cd .."
   },
   "author": "",
   "license": "ISC",
