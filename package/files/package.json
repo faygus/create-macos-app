@@ -1,5 +1,5 @@
 {
-  "name": "azog-macos",
+  "name": "create-macos-app",
   "version": "1.0.0",
   "description": "macOs app generator from azog formatted app",
 	"main": "index.js",
@@ -8,7 +8,7 @@
   "author": "Jean-Samuel Durier",
 	"license": "ISC",
   "bin": {
-    "azog-macos": "./bin/azog-macos"
+    "create-macos-app": "./bin/create-macos-app"
   },
   "dependencies": {
   }

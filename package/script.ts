@@ -13,7 +13,7 @@ fs.copyFileSync(path.join(__dirname, 'files', packageJSONFileName), path.join(di
 if (!fs.existsSync(binPath)) {
 	fs.mkdirSync(binPath);
 }
-const binFileName = 'azog-macos';
+const binFileName = 'create-macos-app';
 fs.copyFileSync(path.join(__dirname, 'files', binFileName), path.join(binPath, binFileName));
 
 // copy .project-template
