@@ -1,0 +1,15 @@
+{
+  "name": "azog-macos",
+  "version": "1.0.0",
+  "description": "macOs app generator from azog formatted app",
+	"main": "index.js",
+	"types": "index.d.ts",
+  "keywords": [],
+  "author": "Jean-Samuel Durier",
+	"license": "ISC",
+  "bin": {
+    "azog-macos": "./bin/azog-macos"
+  },
+  "dependencies": {
+  }
+}

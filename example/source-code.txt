@@ -1,0 +1,31 @@
+//
+//  AppDelegate.swift
+//  monSuperProjet
+//
+//  Created by azog on 11/05/2019.
+//  Copyright © 2019 maSuperOrganisation. All rights reserved.
+//
+
+import Cocoa
+
+@NSApplicationMain
+class AppDelegate: NSObject, NSApplicationDelegate {
+
+    @IBOutlet weak var window: NSWindow!
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
+        window.setContentSize(CGSize(width: 300, height: 300))
+        let parentView = window.contentView!
+        window.backgroundColor = .red
+        let subview = NSView()
+        subview.wantsLayer = true
+        subview.layer?.backgroundColor = NSColor.green.cgColor
+        parentView.addSubview(subview)
+        
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        subview.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
+        subview.centerYAnchor.constraint(equalTo: parentView.centerYAnchor).isActive = true
+        subview.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        subview.heightAnchor.constraint(equalToConstant: 100).isActive = true
+    }
+}
