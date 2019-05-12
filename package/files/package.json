@@ -11,5 +11,7 @@
     "create-macos-app": "./bin/create-macos-app"
   },
   "dependencies": {
+		"file-system": "^2.2.2",
+    "fs-extra": "^8.0.0"
   }
 }
